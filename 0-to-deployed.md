@@ -39,9 +39,17 @@ Take time to see the options available and to read the text on each page.
 
 ## Exercise - Setup a project
 
-1. Upload the sample website package via `http://<hostname>/Octopus/app#/library/packages/upload`
+1. Upload the [Acme.Web.1.0.0.nupkg sample package](/resources/Acme.1Acme.Web.1.0.0.nupkg) via `http://<hostname>/Octopus/app#/library/packages/upload`
 2. Add a new project, suggested name `Frist`
-3. Add a step 
+3. Add a `Deploy to IIS` step to the Process
+   1. Name `Deploy Website`
+   2. Run on role `Web`
+   3. Package ID `Acme.Web`
+   4. IIS Website and AppPool name `Acme`
+   5. Take note of the other options available, but leave them as their default
+4. Create a release
+5. Deploy to Sandpit
+6. Once the deployment has completed, got `http://<hostname>` to view the deployed website
 
 
 
